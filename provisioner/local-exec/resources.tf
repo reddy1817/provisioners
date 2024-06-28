@@ -38,7 +38,11 @@ resource "aws_instance" "web" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -u centos -i '${self.public_ip}, '--private-key RGAS.pem httpd.yml"
+    environment = {
+      public_ip = "${self.public_ip}"
+    }
+    working_dir = "."
+    command     = "ansible-playbook -u centos -i '${self.public_ip}, '--private-key RGAS.pem httpd.yml"
 
   }
 
