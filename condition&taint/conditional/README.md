@@ -4,6 +4,10 @@
 # terraform destroy -- will destroy resource and will not recreate
 # terraform taint -- will destroy resource and will recreate next time and bring to exiting terraform manage.	
 
+
+https://developer.hashicorp.com/terraform/language/expressions/conditionals
+https://developer.hashicorp.com/terraform/cli/commands/taint
+
 1, Change the instance type in configuration file and then taint the resource.
 
 #terraform taint aws_instance.web[0]
