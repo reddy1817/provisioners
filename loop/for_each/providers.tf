@@ -7,9 +7,8 @@ terraform {
   }
 }
 
-#configure the AWS provider
+#configure the aws Provider
 provider "aws" {
-  region  = var.region
+  region  = "eu-west-2"
   profile = "dev"
-
 }

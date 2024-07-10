@@ -1,5 +1,4 @@
-variable "region" {
-  type    = string
-  default = "eu-west-2"
-
+variable "Name" {
+  type    = set(string)
+  default = ["laddu", "halwa"]
 }
